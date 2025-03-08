@@ -11,15 +11,12 @@ import os
 import pandas as pd
 
 # Dapatkan lokasi absolut berdasarkan lokasi script
-file_path = os.path.join(os.path.dirname(__file__), "main_data.csv")
+file_path = os.path.join(os.getcwd(), "dashboard", "main_data.csv")
 
-# Debugging: cek apakah file ada sebelum membaca
 if os.path.exists(file_path):
     print(f"✅ File ditemukan: {file_path}")
-    day_df = pd.read_csv(file_path)
 else:
-    print(f"❌ ERROR: File tidak ditemukan di {file_path}")
-    day_df = None  # Hindari error jika file tidak ditemukan
+    print("❌ File tidak ditemukan!")
 
 
 day_df = pd.read_csv("main_data.csv")
