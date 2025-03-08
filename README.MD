@@ -10,8 +10,8 @@ submission
 │   ├───main_data.csv
 │   └───dashboard.py
 ├───data
-│   ├───data_1.csv
-│   └───data_2.csv
+│   ├───day.csv
+│   └───hour.csv
 ├───notebook.ipynb
 ├───README.md
 ├───requirements.txt
