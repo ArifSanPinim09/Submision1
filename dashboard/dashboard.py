@@ -18,8 +18,8 @@ if os.path.exists(file_path):
 else:
     print("❌ File tidak ditemukan!")
 
+day_df = pd.read_csv(file_path)
 
-day_df = pd.read_csv("main_data.csv")
 
 day_df['dteday'] = pd.to_datetime(day_df['dteday'])  # Konversi tanggal
 
