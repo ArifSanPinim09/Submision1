@@ -5,10 +5,9 @@ import matplotlib.pyplot as plt
 import folium
 from streamlit_folium import folium_static
 
-# Load dataset
-
 import os
 import pandas as pd
+
 
 # Dapatkan lokasi absolut berdasarkan lokasi script
 file_path = os.path.join(os.getcwd(), "dashboard", "main_data.csv")
@@ -20,10 +19,9 @@ else:
 
 day_df = pd.read_csv(file_path)
 
+day_df['dteday'] = pd.to_datetime(day_df['dteday'])
 
-day_df['dteday'] = pd.to_datetime(day_df['dteday'])  # Konversi tanggal
 
-# Judul Dashboard
 st.title("Dashboard Analisis Penyewaan Sepeda")
 
 # Pilihan visualisasi
